@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React , {useState} from 'react'
+import Covid from './components/covid'
 
-function App() {
+export const App = () => {
+  const [image, setImage] = useState("")
+  const submitImage=() =>{
+    const data = new FormData()
+    data.append("file", image)
+    data.append("upload_preset", "rkbetzk1")
+    data.append("cloud_name", "dsseuy4i2")
+
+    fetch("https://api.cloudinary.com/v1_1/dsseuy4i2/image/upload", {
+  method:"post",
+  body:data
+})
+.then((res)=>res.json())
+.then((data)=>{
+  console.log(data);
+})
+.catch((err)=>{
+  console.log(err)
+})
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Covid/ >
+    <div>
+      <div>
+        <input type="file" onChange={(e)=>setImage(e.target.files[0])} />
+        <button onClick={submitImage}> upload</button>
+      </div>
     </div>
-  );
+    </>
+  )
 }
-
-export default App;
+export default App

@@ -1,0 +1,20 @@
+.card{
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin:40px;
+    
+    
+  }
+ h1{
+  color: red;
+text-align: center;
+text-transform: capitalize;
+ }
+ h2{
+  color: rgb(48, 200, 48);
+  text-align: center;
+  font-weight: bolder;
+  text-decoration:underline;
+  text-transform: capitalize;
+ }

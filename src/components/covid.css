@@ -18,3 +18,8 @@ text-transform: capitalize;
   text-decoration:underline;
   text-transform: capitalize;
  }
+ .covid{
+
+display: flex;
+justify-content: center;
+ }

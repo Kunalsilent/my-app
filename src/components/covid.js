@@ -26,6 +26,7 @@ export const Covid = () => {
     <h2>
     COVID-19 CORONAVIRUS TRACKER
     </h2>
+    <div className='covid'>
     <ul>
         <li  className='card'>
             <div className='card_name'>
@@ -76,6 +77,7 @@ export const Covid = () => {
             </div>
         </li>
     </ul>
+    </div>
     </section>
     </>
   )
